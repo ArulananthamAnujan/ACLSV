@@ -123,7 +123,7 @@ svg{display:block}
 
 /* Cards */
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:border-color .18s,box-shadow .18s,transform .18s}
+.card{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:border-color .18s,box-shadow .18s,transform .18s}
 .card:hover{border-color:#b9cdd6;box-shadow:var(--shadow);transform:translateY(-3px)}
 .card .num{color:var(--gold-dark);font-size:11.5px}
 .card h3{font-weight:800;font-size:20px;letter-spacing:-.02em;margin:14px 0 8px}
@@ -219,10 +219,9 @@ svg{display:block}
 .quick-nav{background:var(--white);border-bottom:1px solid var(--line)}
 .quick-nav .wrap{display:flex;overflow-x:auto;scrollbar-width:none}
 .quick-nav .wrap::-webkit-scrollbar{display:none}
-.quick-nav a{flex:none;padding:16px 0 13px;margin-right:28px;border-bottom:3px solid transparent;font-size:14.5px;font-weight:600;color:var(--muted);white-space:nowrap}
+.quick-nav a{flex:none;padding:16px 0 13px;margin-right:26px;border-bottom:3px solid transparent;font-size:14.5px;font-weight:600;color:var(--muted);white-space:nowrap}
 .quick-nav a:hover{color:var(--navy)}
 .quick-nav a.current{color:var(--navy);border-bottom-color:var(--gold)}
-@media(min-width:901px){.quick-nav .wrap{flex-wrap:wrap;overflow:visible}}
 .page-body{min-height:340px}
 .page-body.section{padding:60px 0 88px}
 .page-body:not(.about){background:var(--white)}
@@ -272,13 +271,13 @@ footer{background:var(--navy-deep);color:#c4d4dc;padding:64px 0 28px;font-size:1
   .section,.home-updates{padding:60px 0}
   .page-body.section{padding:44px 0 60px}
   .section-head{grid-template-columns:minmax(0,1fr);gap:14px;margin-bottom:30px}
-  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
   .ribbon .wrap{grid-template-columns:repeat(2,1fr)}
   .foot{grid-template-columns:repeat(2,minmax(0,1fr))}
   .foot-brand{grid-column:1/-1}
   .leadership-intro,.directory-panel{padding:28px}
   .leadership-mark{min-height:160px}
 }
+@media(max-width:760px){.cards,.committee-information,.directory-details{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:640px){
   .top .right{display:none}
   .alliance-emblem{width:48px;height:48px}
@@ -317,7 +316,7 @@ footer{background:var(--navy-deep);color:#c4d4dc;padding:64px 0 28px;font-size:1
 <script>
 const sections=[...document.querySelectorAll('main > section[id]')];
 const labels={'home-updates':['News and updates','Latest information from the alliance.'],'community-preview':['Our community','The people and schools behind the alliance.'],committee:['Our committee','Meet the people who will guide the alliance and support community language education across Victoria.'],about:['About ACLSV','Learn about the purpose of our alliance and our vision for community language schools.'],services:['Programs & services','Explore the areas of support, information and learning for community language schools.'],learning:['Professional learning','Explore learning and development for teachers, volunteers and school leaders.'],funding:['Funding & accreditation','Find official information to help your school understand funding, accreditation, reporting and insurance.'],preschool:['Preschool programs','Explore early years language learning and preschool funding information.'],vce:['VCE language providers','Find official sources on senior secondary language provision, registration and standards.'],safety:['Child safety','Find official standards, safety guidance and information to help protect children.'],directory:['Find a community language school','Find out about the school directory and where to find existing information.'],library:['Resources & publications','Explore teaching resources, publications and the forms and templates planned for ACLSV.'],resources:['Useful links','Find trusted starting points for community language school information.'],news:['News & events','Find the latest announcements and event information from ACLSV.'],support:['For our community','Explore information for schools, teachers, volunteers and families.'],join:['Membership','Discover how your school can connect with the alliance.'],contact:['Contact ACLSV','Get in touch with Mr Paramanathan about ACLSV and community language schools.']};
-const sectionNav=[['services','All services'],['committee','Committee'],['learning','Professional learning'],['funding','Funding & accreditation'],['preschool','Preschool'],['vce','VCE providers'],['safety','Child safety'],['directory','Find a school'],['library','Resources'],['news','News & events']];
+const sectionNav=[['services','All services'],['committee','Committee'],['learning','Professional learning'],['funding','Funding'],['preschool','Preschool'],['vce','VCE'],['safety','Child safety'],['directory','Find a school'],['library','Resources'],['news','News & events']];
 const homeSections=['home-updates','services','support','about','community-preview','join'];
 const main=document.querySelector('main'),hero=document.querySelector('.hero'),ribbon=document.querySelector('.ribbon');
 const banner=document.createElement('div');banner.className='page-banner';main.prepend(banner);
